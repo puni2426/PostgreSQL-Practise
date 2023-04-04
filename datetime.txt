@@ -1,0 +1,78 @@
+employee=# select current_date;
+ current_date 
+--------------
+ 2023-04-03
+(1 row)
+
+employee=# select current_time;
+     current_time      
+-----------------------
+ 14:14:52.476896+05:30
+(1 row)
+
+employee=# select now()::date;
+    now     
+------------
+ 2023-04-03
+(1 row)
+
+employee=# select now()::time;
+       now       
+-----------------
+ 14:15:30.706286
+(1 row)
+
+HINT:  Could not choose a best candidate function. You might need to add explicit type casts.
+employee=# select extract(year from date('2012 12 12'));
+ date_part 
+-----------
+      2012
+(1 row)
+
+employee=# select extract(month from date('2012 12 12'));
+ date_part 
+-----------
+        12
+(1 row)
+
+employee=# select extract(day from date('2012 12 1'));
+ date_part 
+-----------
+         1
+(1 row)
+
+employee=# show timezone;
+   TimeZone   
+--------------
+ Asia/Kolkata
+(1 row)
+
+employee=# select now();
+               now                
+----------------------------------
+ 2023-04-03 14:20:22.256673+05:30
+(1 row)
+
+employee=# select now()::date;
+    now     
+------------
+ 2023-04-03
+(1 row)
+
+employee=# select now();
+               now                
+----------------------------------
+ 2023-04-03 14:20:50.235142+05:30
+(1 row)
+
+employee=# select current_timestamp;
+        current_timestamp         
+----------------------------------
+ 2023-04-03 14:21:14.982942+05:30
+(1 row)
+
+employee=# select interval 'P6Y2M3D' + interval 'P2Y3M12D';
+        ?column?        
+------------------------
+ 8 years 5 mons 15 days
+(1 row)
